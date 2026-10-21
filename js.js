@@ -10,13 +10,19 @@ function toggleTheme() {
 
 // ==================== LANGUAGE TOGGLE ====================
 // Default to EN: the site targets international clients. RU stays available via the toggle.
-let currentLang = localStorage.getItem('lang') || 'en';
+//
+// The key is namespaced deliberately. localStorage is scoped to the origin, not the path, and
+// an older page at as45671234.github.io/-resume/ writes a plain "lang" key that defaults to
+// "ru". Sharing that key meant anyone who had ever opened the old page landed here in Russian.
+const LANG_KEY = 'portfolio_lang';
+const storedLang = localStorage.getItem(LANG_KEY);
+let currentLang = storedLang === 'ru' || storedLang === 'en' ? storedLang : 'en';
 
 function toggleLanguage() {
   currentLang = currentLang === 'en' ? 'ru' : 'en';
   document.getElementById('lang-label').textContent = currentLang.toUpperCase();
   updateLanguage();
-  localStorage.setItem('lang', currentLang);
+  localStorage.setItem(LANG_KEY, currentLang);
 }
 
 function updateLanguage() {
