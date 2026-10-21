@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arnat Sultanbek | Full-Stack Product Engineer</title>
+  <meta name="description" content="Full-stack product engineer in Astana, Kazakhstan. I build and operate production systems with payments, access control and self-hosted infrastructure. Available for remote contract work.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Controls -->
+  <button class="toggle-theme" onclick="toggleTheme()" title="Toggle theme">
+    <img id="theme-icon" src="img/icon2.png" alt="Theme" />
+  </button>
+  <button class="toggle-language" onclick="toggleLanguage()" title="Switch language">
+    <span id="lang-label">EN</span>
+  </button>
+
+  <!-- Burger Menu -->
+  <div class="burger" onclick="toggleMobileNav()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a data-lang="en" href="#about">About</a>
+    <a data-lang="ru" style="display: none;" href="#about">О себе</a>
+    <a data-lang="en" href="#services">What I do</a>
+    <a data-lang="ru" style="display: none;" href="#services">Чем занимаюсь</a>
+    <a data-lang="en" href="#portfolio">Work</a>
+    <a data-lang="ru" style="display: none;" href="#portfolio">Проекты</a>
+    <a data-lang="en" href="#contacts">Contact</a>
+    <a data-lang="ru" style="display: none;" href="#contacts">Контакты</a>
+  </nav>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a data-lang="en" href="#about">About</a>
+    <a data-lang="ru" style="display: none;" href="#about">О себе</a>
+    <a data-lang="en" href="#services">What I do</a>
+    <a data-lang="ru" style="display: none;" href="#services">Чем занимаюсь</a>
+    <a data-lang="en" href="#portfolio">Work</a>
+    <a data-lang="ru" style="display: none;" href="#portfolio">Проекты</a>
+    <a data-lang="en" href="#contacts">Contact</a>
+    <a data-lang="ru" style="display: none;" href="#contacts">Контакты</a>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 data-lang="en">Full-stack product engineer</h1>
+        <h1 data-lang="ru" style="display: none;">Full-stack продуктовый инженер</h1>
+
+        <p data-lang="en"><strong>I build production systems with payments, access control and self-hosted infrastructure — and then I run them.</strong> Schema, backend, frontend, deployment, and the tooling that keeps them alive unattended.</p>
+        <p data-lang="ru" style="display: none;"><strong>Строю production-системы с платежами, разделением доступа и собственной инфраструктурой — и сам их эксплуатирую.</strong> Схема данных, бэкенд, фронтенд, деплой и инструменты, которые держат всё это в работе без присмотра.</p>
+
+        <p data-lang="en">My largest project sells Wi-Fi to passengers on <strong>24 Astana city buses</strong>, and has to stay correct when a bus drives into a dead zone mid-payment.</p>
+        <p data-lang="ru" style="display: none;">Крупнейший проект продаёт Wi-Fi пассажирам <strong>17 городских автобусов Астаны</strong> и должен оставаться корректным, когда автобус уходит в мёртвую зону посреди оплаты.</p>
+
+        <p data-lang="en"><strong>Available for remote contract work.</strong> Astana, Kazakhstan (UTC+5) — comfortable overlap with European hours. Registered sole proprietor: I contract and invoice directly, with no employer-of-record overhead.</p>
+        <p data-lang="ru" style="display: none;"><strong>Открыт к удалённым контрактам.</strong> Астана, Казахстан (UTC+5). Работаю как ИП — заключаю договор и выставляю счёт напрямую.</p>
+
+        <div class="hero-buttons">
+          <a href="#portfolio" class="btn btn-primary">
+            <span data-lang="en">See the work</span>
+            <span data-lang="ru" style="display: none;">Смотреть проекты</span>
+          </a>
+          <a href="mailto:arnatsultanbek2@gmail.com" class="btn btn-secondary">
+            <span data-lang="en">Email me</span>
+            <span data-lang="ru" style="display: none;">Написать на почту</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="img/me.webp" alt="Arnat Sultanbek">
+        </div>
+        <div class="about-text">
+          <h2 data-lang="en">About</h2>
+          <h2 data-lang="ru" style="display: none;">Обо мне</h2>
+
+          <div data-lang="en">
+            <p>I'm Arnat, a full-stack engineer in Astana. I've been building commercial systems since 2024, and I have three of them live in production that I also operate day to day.</p>
+            <p>Most of my work has involved money, access control or hardware, so the hard parts are rarely in the UI. Reconciling payments against the state of a router on a moving bus. Modelling spending limits that can't be double-spent. Making a cash drawer balance at end of shift, and recording the discrepancy when it doesn't.</p>
+            <p>I deploy and run what I build — Docker, nginx, systemd, self-managed VPS — rather than handing off at the repo boundary. Every project below includes the operational tooling that makes it survivable: health checks, recovery scripts, runbooks.</p>
+          </div>
+          <div data-lang="ru" style="display: none;">
+            <p>Меня зовут Арнат, я full-stack инженер из Астаны. Делаю коммерческие системы с 2024 года, три из них сейчас работают в продакшене — и я же их обслуживаю.</p>
+            <p>Почти везде в моей работе были деньги, разделение доступа или железо, поэтому сложное почти никогда не в интерфейсе. Сверить платёж с состоянием роутера в движущемся автобусе. Описать лимиты так, чтобы их нельзя было потратить дважды. Сделать так, чтобы касса сходилась в конце смены, а когда не сходится — чтобы расхождение фиксировалось.</p>
+            <p>Я деплою и эксплуатирую то, что пишу: Docker, nginx, systemd, собственный VPS. В каждом проекте ниже есть операционная часть — health-check'и, скрипты восстановления, runbook.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT I DO -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="section-title" data-lang="en">What I do</h2>
+      <h2 class="section-title" data-lang="ru" style="display: none;">Чем занимаюсь</h2>
+
+      <div class="services-grid">
+        <div class="service-card premium">
+          <div class="service-icon">📡</div>
+          <h3 data-lang="en">Payments against real-world state</h3>
+          <h3 data-lang="ru" style="display: none;">Платежи, сверенные с реальным состоянием</h3>
+
+          <p data-lang="en">Systems where a payment has to produce a physical or network effect, and the two sides fail independently. Durable queues, atomic claims, idempotent writes, verification after the fact.</p>
+          <p data-lang="ru" style="display: none;">Системы, где платёж обязан дать физический или сетевой эффект, а две стороны падают независимо. Надёжные очереди, атомарный захват задач, идемпотентная запись, проверка результата.</p>
+
+          <ul class="service-features">
+            <li data-lang="en">FreedomPay, Kaspi · HMAC-signed callbacks, async reconciliation</li>
+            <li data-lang="ru" style="display: none;">FreedomPay, Kaspi · подписанные callback'и, асинхронная сверка</li>
+
+            <li data-lang="en">MikroTik RouterOS over WireGuard · captive portals</li>
+            <li data-lang="ru" style="display: none;">MikroTik RouterOS через WireGuard · captive portal</li>
+
+            <li data-lang="en">Retry semantics that survive restarts and dead zones</li>
+            <li data-lang="ru" style="display: none;">Ретраи, которые выживают после рестарта и потери связи</li>
+          </ul>
+
+          <div class="service-price">
+            <span>Python / FastAPI / Linux</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🔐</div>
+          <h3 data-lang="en">Multi-role platforms and back-office</h3>
+          <h3 data-lang="ru" style="display: none;">Мультиролевые платформы и бэк-офис</h3>
+
+          <p data-lang="en">Products where several audiences share one database and must not see each other's data. Isolation enforced in the schema through ownership chains, not by filtering in the UI.</p>
+          <p data-lang="ru" style="display: none;">Продукты, где несколько аудиторий делят одну базу и не должны видеть данные друг друга. Изоляция — на уровне схемы через цепочки владения, а не фильтром в интерфейсе.</p>
+
+          <ul class="service-features">
+            <li data-lang="en">Role separation via route groups · SMS OTP, JWT, OAuth</li>
+            <li data-lang="ru" style="display: none;">Разделение ролей через route groups · SMS OTP, JWT, OAuth</li>
+
+            <li data-lang="en">Money as DECIMAL, two-phase reversible transactions, audit trails</li>
+            <li data-lang="ru" style="display: none;">Деньги в DECIMAL, двухфазные отменяемые транзакции, журнал действий</li>
+
+            <li data-lang="en">Admin surfaces built for non-technical operators</li>
+            <li data-lang="ru" style="display: none;">Админки, рассчитанные на нетехнических сотрудников</li>
+          </ul>
+
+          <div class="service-price">
+            <span>Next.js / TypeScript / PostgreSQL / Prisma</span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">🛠️</div>
+          <h3 data-lang="en">Deployment and operations</h3>
+          <h3 data-lang="ru" style="display: none;">Деплой и эксплуатация</h3>
+
+          <p data-lang="en">I ship to infrastructure I manage and stay responsible for it. If a system runs unattended, every recovery path has to be a script rather than a person remembering what to do.</p>
+          <p data-lang="ru" style="display: none;">Я разворачиваю на инфраструктуре, которой сам управляю, и отвечаю за неё дальше. Если система работает без присмотра, каждый путь восстановления должен быть скриптом, а не памятью человека.</p>
+
+          <ul class="service-features">
+            <li data-lang="en">Docker Compose, nginx, systemd, WireGuard on self-managed VPS</li>
+            <li data-lang="ru" style="display: none;">Docker Compose, nginx, systemd, WireGuard на своём VPS</li>
+
+            <li data-lang="en">Health checks, diagnostics, recovery scripts, runbooks</li>
+            <li data-lang="ru" style="display: none;">Health-check'и, диагностика, скрипты восстановления, runbook'и</li>
+
+            <li data-lang="en">Handover: documentation and admin tooling, not just a repo</li>
+            <li data-lang="ru" style="display: none;">Передача проекта: документация и админ-инструменты, а не только репозиторий</li>
+          </ul>
+
+          <div class="service-price">
+            <span>Ubuntu / VPS / Docker / nginx</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO SECTION -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2 class="section-title" data-lang="en">Commercial work</h2>
+      <h2 class="section-title" data-lang="ru" style="display: none;">Коммерческие проекты</h2>
+
+      <p style="text-align:center; max-width:46rem; margin:0 auto 2.5rem;" data-lang="en">Paid client projects, delivered end-to-end and operated after delivery.</p>
+      <p style="text-align:center; max-width:46rem; margin:0 auto 2.5rem; display:none;" data-lang="ru">Оплаченные проекты заказчиков — сделаны целиком и обслуживались после сдачи.</p>
+
+      <div class="portfolio-grid">
+
+          <!-- WiFi-Pay — flagship -->
+          <div class="portfolio-item premium-item">
+            <div class="portfolio-img">
+              <img src="https://image.thum.io/get/width/1200/https://wifi-pay.kz/landing" onerror="this.src='https://placehold.co/600x400?text=WiFi-Pay'" alt="WiFi-Pay">
+            </div>
+            <div class="portfolio-info">
+              <h3>WiFi-Pay — paid Wi-Fi on 24 city buses</h3>
+              <p class="portfolio-meta" data-lang="en"><strong>3,420 paid sessions · ₸2.98M processed · 24 buses</strong></p>
+              <p class="portfolio-meta" data-lang="ru" style="display: none;"><strong>3 420 платных сессий · 2,98 млн ₸ проведено · 24 автобуса</strong></p>
+              <p class="portfolio-meta" data-lang="en">Sells timed internet to bus passengers and provisions their device on that bus's MikroTik router over WireGuard. A bus drives through dead zones, so the payment callback can succeed while the router is unreachable — a durable activation queue with atomic claim-and-retry means the passenger still gets online, and expiry runs on a scheduler on the router itself so sessions end correctly even without an uplink. 90% of payments arrived via Kaspi rather than the card rail, so the asynchronous reconciliation path ended up carrying nearly all the volume. 323 commits against live hardware.</p>
+              <p class="portfolio-meta" data-lang="ru" style="display: none;">Продаёт интернет пассажирам автобуса и выдаёт доступ устройству на роутере MikroTik этого автобуса через WireGuard. Автобус проезжает мёртвые зоны, поэтому callback об оплате может прийти, когда роутер недоступен — надёжная очередь активаций с атомарным захватом и ретраями доводит пассажира до интернета, а истечение доступа навешено на планировщик самого роутера, поэтому сессии корректно заканчиваются даже без связи с сервером. 90% платежей пришли через Kaspi, а не через карты, поэтому почти весь объём прошёл через путь асинхронной сверки. 323 коммита против живого железа.</p>
+              <p class="portfolio-meta"><strong>Python · FastAPI · MikroTik RouterOS · WireGuard · FreedomPay · Kaspi · systemd</strong></p>
+              <a href="https://wifi-pay.kz/landing" target="_blank" class="btn-link" data-lang="en">View live</a>
+              <a href="https://wifi-pay.kz/landing" target="_blank" class="btn-link" data-lang="ru" style="display: none;">Открыть сайт</a>
+              <!-- TODO Arnat: add the repo link once wi-fi-pay history is purged and the repo is clean -->
+            </div>
+          </div>
+
+          <!-- LIFE CARD -->
+          <div class="portfolio-item premium-item">
+            <div class="portfolio-img">
+              <img src="https://image.thum.io/get/width/1200/https://lifecard.kz/" onerror="this.src='https://placehold.co/600x400?text=LIFE+CARD'" alt="LIFE CARD">
+            </div>
+            <div class="portfolio-info">
+              <h3>LIFE CARD — corporate benefits card platform</h3>
+              <p class="portfolio-meta" data-lang="en">Closed-loop benefits network: organizations issue cards with spending limits set per category, partner merchants accept them, and each transaction splits the bill between what the card covers and what the holder pays. Two-phase transactions — pending, then confirmed or cancelled with reason and acting staff recorded — so a mistyped amount at the till is reversible and attributable. Five roles across four isolated web surfaces.</p>
+              <p class="portfolio-meta" data-lang="ru" style="display: none;">Закрытая сеть льгот: организации выдают карты с лимитами по категориям, партнёры их принимают, каждая транзакция делит чек между тем, что покрывает карта, и тем, что платит держатель. Двухфазные транзакции — сначала pending, потом подтверждение или отмена с причиной и автором — поэтому опечатка в сумме на кассе обратима и прослеживаема. Пять ролей, четыре изолированных веб-контура.</p>
+              <p class="portfolio-meta"><strong>Next.js · TypeScript · PostgreSQL · Prisma · SMS OTP · QR</strong></p>
+              <a href="https://lifecard.kz/" target="_blank" class="btn-link" data-lang="en">View live</a>
+              <a href="https://lifecard.kz/" target="_blank" class="btn-link" data-lang="ru" style="display: none;">Открыть сайт</a>
+            </div>
+          </div>
+
+          <!-- Voice of Mentors -->
+          <div class="portfolio-item">
+            <div class="portfolio-img">
+              <img src="https://image.thum.io/get/width/1200/https://voiceofmentors.kz/" onerror="this.src='https://placehold.co/600x400?text=Voice+of+Mentors'" alt="Voice of Mentors">
+            </div>
+            <div class="portfolio-info">
+              <h3>Voice of Mentors — mentorship platform with per-mentor CRM</h3>
+              <p class="portfolio-meta" data-lang="en">25 mentor profiles and 29 published articles. Each mentor gets a private client book — clients, sessions, tasks, files — isolated by the ownership chain in the schema rather than by filtering in the UI, so two mentors on the same platform are structurally invisible to each other. Discoverability is a product feature: server-rendered per-profile metadata and a sitemap generated from the live database, so an approved mentor is indexable immediately with no deploy.</p>
+              <p class="portfolio-meta" data-lang="ru" style="display: none;">25 профилей менторов и 29 опубликованных статей. У каждого ментора своя клиентская база — клиенты, сессии, задачи, файлы — изолированная цепочкой владения в схеме, а не фильтром в интерфейсе, поэтому два ментора на одной платформе структурно не видят друг друга. Индексация сделана как часть продукта: метаданные каждого профиля рендерятся на сервере, а sitemap генерируется из живой базы, поэтому одобренный ментор попадает в поиск сразу и без деплоя.</p>
+              <p class="portfolio-meta"><strong>Next.js · TypeScript · PostgreSQL · Prisma · NextAuth · Docker · nginx</strong></p>
+              <a href="https://voiceofmentors.kz/" target="_blank" class="btn-link" data-lang="en">View live</a>
+              <a href="https://voiceofmentors.kz/" target="_blank" class="btn-link" data-lang="ru" style="display: none;">Открыть сайт</a>
+            </div>
+          </div>
+
+          <!-- ARCMET -->
+          <div class="portfolio-item">
+            <div class="portfolio-img">
+              <img src="https://image.thum.io/get/width/1200/https://arcmet.kz/" onerror="this.src='https://placehold.co/600x400?text=ARCMET'" alt="ARCMET">
+            </div>
+            <div class="portfolio-info">
+              <h3>ARCMET — distributor catalogue and mini CRM</h3>
+              <p class="portfolio-meta" data-lang="en">Catalogue and order management for a direct distributor of thermal insulation, waterproofing membranes and roofing. Excel import/export for supplier price lists, order handling and an admin panel — deployed and handed over to the client's own staff.</p>
+              <p class="portfolio-meta" data-lang="ru" style="display: none;">Каталог и управление заказами для прямого дистрибьютора теплоизоляции, гидроизоляционных мембран и кровли. Импорт/экспорт Excel для прайс-листов поставщиков, работа с заказами и админка — развёрнуто и передано сотрудникам заказчика.</p>
+              <p class="portfolio-meta"><strong>TypeScript · Express · MongoDB</strong></p>
+              <a href="https://arcmet.kz/" target="_blank" class="btn-link" data-lang="en">View live</a>
+              <a href="https://arcmet.kz/" target="_blank" class="btn-link" data-lang="ru" style="display: none;">Открыть сайт</a>
+            </div>
+          </div>
+
+          <!-- Bathroom Design -->
+          <div class="portfolio-item">
+            <div class="portfolio-img">
+              <img src="https://image.thum.io/get/width/1200/https://bathroomdesign.kz/" onerror="this.src='https://placehold.co/600x400?text=Bathroom+Design'" alt="Bathroom Design">
+            </div>
+            <div class="portfolio-info">
+              <h3>Bathroom Design — catalogue with backend and admin panel</h3>
+              <p class="portfolio-meta" data-lang="en">Product catalogue with a backend and an admin panel for managing content and enquiries.</p>
+              <p class="portfolio-meta" data-lang="ru" style="display: none;">Каталог продукции с бэкендом и админ-панелью для управления контентом и обращениями.</p>
+              <p class="portfolio-meta"><strong>TypeScript · Express</strong></p>
+              <a href="https://bathroomdesign.kz/" target="_blank" class="btn-link" data-lang="en">View live</a>
+              <a href="https://bathroomdesign.kz/" target="_blank" class="btn-link" data-lang="ru" style="display: none;">Открыть сайт</a>
+            </div>
+          </div>
+
+          <!-- ADM Mebel -->
+          <div class="portfolio-item">
+            <div class="portfolio-img">
+              <img src="https://image.thum.io/get/width/1200/https://adm-mebel.kz/" onerror="this.src='https://placehold.co/600x400?text=ADM+Mebel'" alt="ADM Mebel">
+            </div>
+            <div class="portfolio-info">
+              <h3>ADM Mebel — storefront and admin panel</h3>
+              <p class="portfolio-meta" data-lang="en">E-commerce storefront with Prisma-backed content and order management for a furniture retailer.</p>
+              <p class="portfolio-meta" data-lang="ru" style="display: none;">Витрина интернет-магазина с управлением контентом и заказами на Prisma для мебельного ритейлера.</p>
+              <p class="portfolio-meta"><strong>TypeScript · Express · Prisma</strong></p>
+              <a href="https://adm-mebel.kz/" target="_blank" class="btn-link" data-lang="en">View live</a>
+              <a href="https://adm-mebel.kz/" target="_blank" class="btn-link" data-lang="ru" style="display: none;">Открыть сайт</a>
+            </div>
+          </div>
+
+      </div>
+
+      <h2 class="section-title" data-lang="en">Built independently</h2>
+      <h2 class="section-title" data-lang="ru" style="display: none;">Собственные продукты</h2>
+
+      <p style="text-align:center; max-width:46rem; margin:0 auto 2.5rem;" data-lang="en">Complete systems built without a client brief and not yet piloted. Here because they show what I build when nobody is specifying it.</p>
+      <p style="text-align:center; max-width:46rem; margin:0 auto 2.5rem; display:none;" data-lang="ru">Законченные системы, сделанные без заказчика и пока не обкатанные на реальном клиенте. Показывают, что я строю, когда задачу не ставит никто.</p>
+
+      <div class="portfolio-grid">
+
+          <!-- Dapter -->
+          <div class="portfolio-item">
+            <div class="portfolio-img">
+              <!-- TODO Arnat: replace with a real screenshot — the shift-close screen is the convincing one -->
+              <img src="https://placehold.co/600x400?text=Dapter+POS" alt="Dapter">
+            </div>
+            <div class="portfolio-info">
+              <h3>Dapter — retail POS and back-office</h3>
+              <p class="portfolio-meta" data-lang="en">~29,000 lines of TypeScript. A shift opens with a counted float and closes with a counted total, and the discrepancy is recorded rather than silently absorbed — the part that actually matters to an owner who isn't standing at the till. Money as DECIMAL(12,2) throughout. Sales, supplier receiving and write-offs are three distinct auditable stock paths rather than one mutable quantity field. Multi-shop isolation in the schema from the first migration.</p>
+              <p class="portfolio-meta" data-lang="ru" style="display: none;">~29 000 строк TypeScript. Смена открывается с пересчитанным остатком и закрывается с пересчитанной суммой, а расхождение фиксируется, а не растворяется — именно это важно владельцу, который не стоит за кассой. Деньги везде в DECIMAL(12,2). Продажи, приёмка от поставщика и списания — три разных прослеживаемых пути движения товара, а не одно изменяемое поле количества. Изоляция магазинов заложена в схему с первой миграции.</p>
+              <p class="portfolio-meta"><strong>Next.js · TypeScript · PostgreSQL · Prisma · ZXing · JsBarcode</strong></p>
+            </div>
+          </div>
+
+          <!-- SaveFood -->
+          <div class="portfolio-item">
+            <div class="portfolio-img">
+              <!-- TODO Arnat: replace with a real screenshot of the map view -->
+              <img src="https://placehold.co/600x400?text=SaveFood" alt="SaveFood">
+            </div>
+            <div class="portfolio-info">
+              <h3>SaveFood — surprise-bag marketplace for unsold food</h3>
+              <p class="portfolio-meta" data-lang="en">Built on Next.js 16, Prisma 7 and PostgreSQL 17. While building it I found and closed an account-takeover vector in the OAuth flow: with email account linking enabled, an attacker could pre-register a victim's unverified email with their own password and inherit the account the moment the victim signed in with Google. Linking disabled, the tradeoff documented, re-enablement gated on email verification.</p>
+              <p class="portfolio-meta" data-lang="ru" style="display: none;">Сделано на Next.js 16, Prisma 7 и PostgreSQL 17. По ходу нашёл и закрыл вектор захвата аккаунта в OAuth-потоке: при включённой привязке аккаунтов по email атакующий мог заранее зарегистрировать непроверенный email жертвы со своим паролем и получить её аккаунт в момент входа через Google. Привязку отключил, компромисс задокументировал, повторное включение — только после проверки email.</p>
+              <p class="portfolio-meta"><strong>Next.js 16 · Prisma 7 · PostgreSQL 17 · Auth.js · MapLibre · 2GIS</strong></p>
+            </div>
+          </div>
+
+          <!-- OlympEd -->
+          <div class="portfolio-item">
+            <div class="portfolio-img">
+              <!-- TODO Arnat: replace with a real screenshot — a test attempt in OLYMPIAD mode -->
+              <img src="https://placehold.co/600x400?text=OlympEd" alt="OlympEd">
+            </div>
+            <div class="portfolio-info">
+              <h3>OlympEd — olympiad-prep education platform</h3>
+              <p class="portfolio-meta" data-lang="en">A test engine with five answer types including source code, where one test definition serves both practice and competition modes rather than two implementations that drift apart until they disagree about grading. Video is pluggable: embedded LiveKit rooms with server-minted tokens, degrading to an external Zoom or Meet link when there's no budget for an SFU — so it installs where video hosting isn't an option.</p>
+              <p class="portfolio-meta" data-lang="ru" style="display: none;">Движок тестов с пятью типами ответов, включая исходный код, где одно описание теста обслуживает и тренировку, и олимпиаду — вместо двух реализаций, которые расходятся, пока не начнут по-разному оценивать. Видео подключаемое: встроенные комнаты LiveKit с токенами, выпускаемыми сервером, с деградацией до внешней ссылки Zoom или Meet, если на SFU нет бюджета.</p>
+              <p class="portfolio-meta"><strong>Next.js · TypeScript · PostgreSQL · Prisma · LiveKit · TipTap</strong></p>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTS SECTION -->
+  <section id="contacts" class="contacts">
+    <div class="container">
+      <h2 class="section-title" data-lang="en">Contact</h2>
+      <h2 class="section-title" data-lang="ru" style="display: none;">Контакты</h2>
+
+      <div class="contacts-content">
+        <p data-lang="en">Open to remote contract work — long-term preferred. Happy to do a paid trial task.</p>
+        <p data-lang="ru" style="display: none;">Открыт к удалённым контрактам, предпочтительно долгосрочным. Готов начать с оплачиваемого тестового задания.</p>
+
+        <div class="social-links">
+          <a href="mailto:arnatsultanbek2@gmail.com" class="social-btn email">Email</a>
+          <!-- TODO Arnat: update this link after renaming your GitHub username -->
+          <a href="https://github.com/ARNAT_USERNAME" target="_blank" class="social-btn">GitHub</a>
+          <!-- TODO Arnat: add your LinkedIn URL once the profile is filled in -->
+          <a href="ARNAT_LINKEDIN" target="_blank" class="social-btn">LinkedIn</a>
+          <a href="https://wa.me/77766230644" class="social-btn whatsapp">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Arnat Sultanbek — Astana, Kazakhstan (UTC+5)</p>
+    </div>
+  </footer>
+
+  <script src="js.js"></script>
+</body>
+</html>
